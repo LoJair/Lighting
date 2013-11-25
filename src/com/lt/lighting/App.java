@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.AudioManager;
 
 import com.lt.lighting.service.LTService;
+import com.lt.lighting.service.LightingService;
 import com.lt.lighting.util.AndroidUtil;
 import com.lt.lighting.util.PreferenceUtil;
 
@@ -33,11 +34,13 @@ public class App extends Application {
 	}
 
 	public static void startService() {
-		AndroidUtil.startService(context, LTService.class);
+//		AndroidUtil.startService(context, LTService.class);
+		AndroidUtil.startService(context, LightingService.class);
 	}
 
 	public static void stopService() {
-		context.stopService(new Intent(context, LTService.class));
+//		context.stopService(new Intent(context, LTService.class));
+		context.stopService(new Intent(context, LightingService.class));
 	}
 
 }

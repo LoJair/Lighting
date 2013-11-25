@@ -64,6 +64,7 @@
         <activity android:name="com.tencent.tauth.AuthActivity" />
 
         <service android:name="com.lt.lighting.service.LTService" />
+        <service android:name="com.lt.lighting.service.LightingService" />
 
         <receiver android:name="com.lt.lighting.receiver.PhoneStateReceiver" >
             <intent-filter>
