@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lt.lighting"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="11" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+
+    <application
+        android:name="com.lt.lighting.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.lt.lighting.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lt.lighting.AboutActivity" />
+        <activity android:name="com.lt.lighting.HelpActivity" />
+        <activity
+            android:name="com.umeng.fb.ConversationActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name="com.umeng.fb.ContactActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <!-- QQ空间和QQ SSO授权的Activity注册 -->
+        <activity android:name="com.tencent.tauth.AuthActivity" />
+
+        <service android:name="com.lt.lighting.service.LTService" />
+
+        <receiver android:name="com.lt.lighting.receiver.PhoneStateReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" /> <!-- sd卡加载完毕 -->
+                <action android:name="android.intent.action.MEDIA_EJECT" /> <!-- 已拔掉外部大容量储存设备发出的广播 -->
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" /> <!-- 存储设备存在但未加载 -->
+                <action android:name="android.intent.action.MEDIA_SHARED" /> <!-- 扩展介质的挂载被解除 (unmount)，因为它已经作为 USB 大容量存储被共享 -->
+                <action android:name="android.intent.action.MEDIA_SCANNER_STARTED" /> <!-- 开始扫描介质的一个目录 -->
+                <action android:name="android.intent.action.MEDIA_SCANNER_FINISHED" /> <!-- 已经扫描完介质的一个目录 -->
+                <action android:name="android.intent.action.MEDIA_REMOVED" /> <!-- 外部储存设备已被移除，不管有没正确卸载,都会发出此广播？ -->
+                <action android:name="android.intent.action.MEDIA_BAD_REMOVAL" /> <!-- 未正确移除SD卡(正确移除SD卡的方法:设置,SD卡和设备内存,卸载SD卡)，但已把SD卡取出来时发出的广播 -->
+                <action android:name="android.intent.action.SCREEN_ON" />
+				<action android:name=""/>
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="52821f2756240b5d280157a5" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="lo20131111" />
+    </application>
+
+</manifest>

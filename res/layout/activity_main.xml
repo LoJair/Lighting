@@ -1,0 +1,366 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg_color"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_hight"
+        android:background="@drawable/tab_bg_normal"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/white_text_color"
+        android:textSize="@dimen/title_bar_text_size" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 启动应用 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_main_start_app"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/tv_main_start_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/start_app"
+                    android:gravity="center_vertical"
+                    android:text="@string/start_lighting"
+                    android:textColor="@color/white_text_color"
+                    android:textSize="@dimen/item_name_text_size" />
+
+                <CheckBox
+                    android:id="@+id/cb_main_start_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:button="@drawable/app_checkbox_selector"
+                    android:checked="true" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/grid_divider_color" />
+
+            <!-- 开机启动 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_main_start_as_begin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip" >
+
+                <ImageView
+                    android:id="@+id/iv_main_start_as_begin_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/start_as_begin" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iv_main_start_as_begin_icon"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_main_start_as_begin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/start_as_begin"
+                        android:textColor="@color/white_text_color"
+                        android:textSize="@dimen/item_name_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_main_start_discribe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/start_discribe"
+                        android:textColor="@color/grid_text_color"
+                        android:textSize="@dimen/item_dicribe_text_size" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/cb_main_start_as_begin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:button="@drawable/app_checkbox_selector"
+                    android:checked="true" />
+            </RelativeLayout>
+
+            <!-- 来电闪光设置 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_main_calling_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/category_title_margin"
+                    android:text="@string/lighting_set"
+                    android:textColor="@color/green_divider_color"
+                    android:textSize="@dimen/category_title_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_main_arrow_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/zhankai" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@color/green_divider_color" />
+
+            <!-- 来电闪光设置 -->
+
+            <include
+                android:id="@+id/layout_main_calling_setting"
+                layout="@layout/calling_setting_layout"
+                android:visibility="visible" />
+
+            <!-- 短信闪光设置 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_main_message_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/category_title_margin"
+                    android:text="@string/message_set"
+                    android:textColor="@color/green_divider_color"
+                    android:textSize="@dimen/category_title_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_main_arrow_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/zhankai" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@color/green_divider_color" />
+
+            <!-- 短信闪光设置 -->
+
+            <include
+                android:id="@+id/layout_main_message_setting"
+                layout="@layout/message_setting_layout"
+                android:visibility="visible" />
+
+            <!-- 通知闪光设置 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_main_notice_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/category_title_margin"
+                    android:text="@string/notice_set"
+                    android:textColor="@color/green_divider_color"
+                    android:textSize="@dimen/category_title_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_main_arrow_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/zhankai" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@color/green_divider_color" />
+
+            <!-- 通知闪光设置 -->
+
+            <include
+                android:id="@+id/layout_main_notice_setting"
+                layout="@layout/notice_setting_layout"
+                android:visibility="visible" />
+
+            <!-- 闪光模式设置 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_lighting_mode_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/category_title_margin"
+                    android:text="@string/lighting_mode"
+                    android:textColor="@color/green_divider_color"
+                    android:textSize="@dimen/category_title_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_main_arrow_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/zhankai" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@color/green_divider_color" />
+
+            <!-- 闪光模式设置 -->
+
+            <include
+                android:id="@+id/layout_lighting_mode_setting"
+                layout="@layout/lighting_mode_setting_layout"
+                android:visibility="visible" />
+
+            <!-- 以下情况停止闪光 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_lighting_stop_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/category_title_margin"
+                    android:text="@string/stop_however"
+                    android:textColor="@color/green_divider_color"
+                    android:textSize="@dimen/category_title_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_main_arrow_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/zhankai" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@color/green_divider_color" />
+
+            <!-- 以下情况停止闪光 -->
+
+            <include
+                android:id="@+id/layout_stop_lighting_setting"
+                layout="@layout/stop_lighting_layout"
+                android:visibility="visible" />
+
+            <!-- 指定时间段闪光 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_set_time_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/category_title_margin"
+                    android:text="@string/set_time_lighting"
+                    android:textColor="@color/green_divider_color"
+                    android:textSize="@dimen/category_title_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/zhankai"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@color/green_divider_color" />
+
+            <!-- 指定时间段闪光 -->
+
+            <include
+                android:id="@+id/layout_set_time"
+                layout="@layout/set_time_layout"
+                android:visibility="visible" />
+
+            <!-- 其他设置 -->
+
+            <LinearLayout
+                android:id="@+id/layout_other_setting_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/category_title_margin"
+                    android:text="@string/other_setting"
+                    android:textColor="@color/green_divider_color"
+                    android:textSize="@dimen/category_title_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@color/green_divider_color" />
+
+            <!-- 其他设置 -->
+
+            <include
+                android:id="@+id/layout_other_setting"
+                android:layout_marginBottom="10dip"
+                layout="@layout/other_setting_layout"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

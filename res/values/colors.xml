@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="title_bar_bg_color">#000000</color>
+    <color name="activity_bg_color">#2e353f</color>
+    <color name="green_divider_color">#00cf9b</color>
+    <color name="grid_divider_color">#3f4650</color>
+    <color name="white_text_color">#ffffff</color>
+    <color name="grid_text_color">#a3a6ab</color>
+    <color name="dialog_bg_color">#3f4650</color>
+    <color name="dialog_border_color">#585858</color>
+    <color name="trans_parent">#00000000</color>
+    <color name="trans_parent1">#99000000</color>
+    <color name="text_onclick">#999999</color>
+
+</resources>

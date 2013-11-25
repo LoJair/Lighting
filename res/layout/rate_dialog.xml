@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@color/activity_bg_color"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="15dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_rate_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calling_lighting_rate_dialog"
+                android:textColor="@color/green_divider_color"
+                android:textSize="@dimen/item_name_text_size" />
+
+            <TextView
+                android:id="@+id/tv_rate_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green_divider_color"
+                android:textSize="@dimen/item_name_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/flicker_time"
+                android:textColor="@color/green_divider_color"
+                android:textSize="@dimen/item_name_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/green_divider_color" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dip"
+            android:gravity="center_vertical" >
+
+            <SeekBar
+                android:id="@+id/sb_rate_dialog"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:max="20"
+                android:maxHeight="9dip"
+                android:minHeight="9dip"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:progressDrawable="@drawable/seekbar_bg"
+                android:thumb="@drawable/progressbar_thumb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="20dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_rate_dialog_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:text="@string/cancel"
+                android:textColor="@color/green_divider_color"
+                android:textSize="@dimen/item_name_text_size" />
+
+            <Button
+                android:id="@+id/btn_rate_dialog_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:background="@drawable/button_bg"
+                android:text="@string/sure"
+                android:textColor="@color/green_divider_color"
+                android:textSize="@dimen/item_name_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

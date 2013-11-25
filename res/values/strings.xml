@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LT来电闪光</string>
+    <string name="action_settings">Settings</string>
+    <string name="about">关于</string>
+    <string name="start_lighting">启动应用</string>
+    <string name="start_as_begin">开机启动</string>
+    <string name="start_discribe">手机重启后自动启动</string>
+    <string name="lighting_set">来电闪光设置</string>
+    <string name="lighting">来电闪光</string>
+    <string name="lighting_rate">闪烁频率</string>
+    <string name="lighting_rate_discribe">调节闪烁快慢</string>
+    <string name="lighting_times">闪烁次数</string>
+    <string name="message_set">短信闪光设置</string>
+    <string name="message">短信闪光</string>
+    <string name="notice_set">通知闪光设置</string>
+    <string name="notice">通知闪光</string>
+    <string name="notice_lighting_discribe">需要开启系统的"通知闪光"设置</string>
+    <string name="lighting_mode">闪光模式设置</string>
+    <string name="lighting_anytime">在任何模式时闪光</string>
+    <string name="shake_mode_only">仅在震动模式闪光</string>
+    <string name="ring_mode_only">仅铃声模式时闪光</string>
+    <string name="stop_however">以下情况停止闪光</string>
+    <string name="stop_when_powerdown">电量低时不闪光</string>
+    <string name="stop_when_shake">摇一摇停止闪光</string>
+    <string name="stop_when_screen_on">屏幕亮时不闪光</string>
+    <string name="set_time_lighting">指定时间段闪光</string>
+    <string name="time_between">闪光时间</string>
+    <string name="time_begin">00:00</string>
+    <string name="time_end">23:59</string>
+    <string name="time_to">-</string>
+    <string name="other_setting">其他设置</string>
+    <string name="zan_ge">打分, 支持一下</string>
+    <string name="five_star">五星好评</string>
+    <string name="share_to_friend">向好友推荐</string>
+    <string name="create_short_cut">创建快捷方式</string>
+    <string name="feel_back">意见反馈</string>
+    <string name="about_us">关于我们</string>
+    <string name="help">使用帮助</string>
+    <string name="check_update">检查更新</string>
+    <string name="calling_lighting_times_dialog">"来电闪烁次数: "</string>
+    <string name="calling_lighting_rate_dialog">"来电闪烁频率: "</string>
+    <string name="message_lighting_times_dialog">"短信闪烁次数: "</string>
+    <string name="message_lighting_rate_dialog">"短信闪烁频率: "</string>
+    <string name="notice_lighting_times_dialog">"通知闪烁次数: "</string>
+    <string name="notice_lighting_rate_dialog">"通知闪烁频率: "</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+    <string name="flicker_time">ms</string>
+    <string name="flicker_number">次</string>
+    <string name="_15_times">15次</string>
+    <string name="_500ms">500ms</string>
+    <string name="_5_times">5次</string>
+    <string name="current_version">当前版本号: </string>
+
+</resources>
